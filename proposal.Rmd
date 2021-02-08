@@ -1,0 +1,24 @@
+---
+title: 'Developing Gene Therapies for Blindness'
+output: pdf_document
+author: "Mishek Thapa"
+---
+
+Retinitis pigmentosa (RP) is an inherited blinding disease that often leads to complete blindness. In this disease, rods then cones die and the retina undergoes significant remodeling. RP is amenable to gene therapy, as has been demonstrated during early treatment (Koch 2012, Michalakis 2014, and Petersen-Jones 2018). However, the time of genetic rescue has been implicated as critical for retinal gene therapy success (Gardiner et al, 2019). An outstanding question in gene therapy of RP is: what genes are responsible for healing the retina's circuitry changes and can the changes be recovered during late treatment? Are these genes also responsible for changes during RP? 
+
+To answer these questions, we will utilize a Cngb1 functional knockout (fKO) mouse model. Here, a genetic blocker (Neolox) prevents normal function of the Cngb1 gene, then inducing RP. Feeding mice tamoxifen then removes the blocker to yield normal Cngb1 expression. This “pseudo gene therapy” allows investigation of the genetic consequences of rescue at early stage and late stage degeneration. The approach enables a best-case scenario for gene therapy that is not subject to experimental variability associated with viral capsid, dose, or injection. Data for these experiments have already been collected, quality checked, and preprocessed by the Field Lab (Duke Neurobiology) into an expression table (Note: this is a new project with data that has not been analyzed).
+
+We will use a negative binomial GLM model, a commonly used model in transcriptomics analysis, to find genes differentially expressed. We will first compare transcriptomics between late stage and early stage treatment of RP with 8 biological samples. Sensitivity analysis will involve finding how results differ depending on the model used. These genes will be functionally analyzed through gene set enrichment analysis to validate they are involved with the retina or neurodegenerative diseases. To further validate whether the genes are also responsible for RP changes, we will will compare them to the genes that were differentially expressed during degeneration (in the RP retina vs wild type retina comparisons). 
+
+Lastly, to further validate this analysis, we will compare this gene list with RNA seq analysis of RP in other animal models. This approach will involve other animals and mouse models for RP (Guadagni 2019). Search for these gene lists will involve pubmed. This analysis will confirm whether these genes are regulated during RP and in the healing of RP. 
+
+# References
+Gardiner KL, Cideciyan AV, Swider M, Dufour VL, Sumaroka A, Komáromy AM, Hauswirth WW, Iwabe S, Jacobson SG, Beltran WA, Aguirre GD. Long-Term Structural Outcomes of Late-Stage RPE65 Gene Therapy. Mol Ther. 2020 Jan 8;28(1):266-278. doi: 10.1016/j.ymthe.2019.08.013. Epub 2019 Sep 3. PMID: 31604676; PMCID: PMC6951840.
+
+Guadagni V, Biagioni M, Novelli E, Aretini P, Mazzanti CM, Strettoi E. Rescuing cones and daylight vision in retinitis pigmentosa mice. FASEB J. 2019 Sep;33(9):10177-10192. doi: 10.1096/fj.201900414R. Epub 2019 Jun 14. PMID: 31199887; PMCID: PMC6764477.
+
+Michalakis S, Koch S, Sothilingam V, Garcia Garrido M, Tanimoto N, Schulze E, Becirovic E, Koch F, Seide C, Beck SC, Seeliger MW, Mühlfriedel R, Biel M. Gene therapy restores vision and delays degeneration in the CNGB1(-/-) mouse model of retinitis pigmentosa. Adv Exp Med Biol. 2014;801:733-9. doi: 10.1007/978-1-4614-3209-8_92. PMCID: 24664765.
+
+Petersen-Jones SM, Occelli LM, Winkler PA, Lee W, Sparrow JR, Tsukikawa M, Boye SL, Chiodo V, Capasso JE, Becirovic E, Schön C, Seeliger MW, Levin AV, Michalakis S, Hauswirth WW, Tsang SH. Patients and animal models of CNGB1-deficient retinitis pigmentosa support gene augmentation approach. J Clin Invest. 2018 Jan 2;128(1):190-206. doi: 10.1172/JCI95161. Epub 2017 Nov 20. PMID: 29202463; PMCID: PMC5749539.
+
+Susanne Koch, Vithiyanjali Sothilingam, Marina Garcia Garrido, Naoyuki Tanimoto, Elvir Becirovic, Fred Koch, Christina Seide, Susanne C. Beck, Mathias W. Seeliger, Martin Biel, Regine Mühlfriedel, Stylianos Michalakis, Gene therapy restores vision and delays degeneration in the CNGB1-/- mouse model of retinitis pigmentosa, Human Molecular Genetics, Volume 21, Issue 20, 15 October 2012, Pages 4486–4496, https://doi.org/10.1093/hmg/dds290
