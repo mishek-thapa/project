@@ -1,0 +1,62 @@
+---
+title: "Retinal Adaptations During Treatment of Inherited Blindness"
+header-includes: 
+   - \usepackage{booktabs}
+   - \usepackage{wrapfig}
+   - \usepackage{lipsum}
+output: pdf_document
+bibliography: book.bib
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r figure-wrapping, include = F}
+#found this code on stackoverflow: https://stackoverflow.com/questions/54100806/r-markdown-how-do-i-make-text-float-around-figures
+defOut <- knitr::knit_hooks$get("plot")  # save the default plot hook 
+knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
+  x <- defOut(x, options)  # first apply the default hook
+  if(!is.null(options$wrapfigure)) {  # then, if option wrapfigure is given ...
+    # create the new opening string for the wrapfigure environment ...
+    wf <- sprintf("\\begin{wrapfigure}{%s}{%g\\textwidth}", options$wrapfigure[[1]], options$wrapfigure[[2]])
+    x  <- gsub("\\begin{figure}", wf, x, fixed = T)  # and replace the default one with it.
+    x  <- gsub("{figure}", "{wrapfigure}", x, fixed = T)  # also replace the environment ending
+  }
+  return(x)
+})
+```
+
+
+  A large effort in neuroscience is the assessment and treatment of degenerative diseases. The underlying question can be stated as follows: what are the structural and functional changes during degeneration and how can they be corrected? An example of a neurodegenerative disease is retinitis pigmentosa (RP), a form of incurable blindness that initially affects the rod photoreceptor cells. In this disease, loss of structure in rods initiates alterations to the overall retinal circuitry (REF). One potential impact is cone-mediated vision, which is responsible for daylight vision and acuity. Another potential impact is the synaptic connections between cones and their downstream bipolar cells. Understanding how retinitis pigmentosa alters the genetic profiles of bipolar cells may provide insights on how cone vision is affected by disease and improve genetic treatments for retinitis pigmentosa. 
+
+  Though the retina's structure and function is stable after development, photoreceptor degeneration has been shown to remodel the retina and possibly deteriorate retinal function (REF). In prior studies of the retina, the retina has been observed to have abnormal contacts with bipolar cells and disruptive spontaneous activity near the ganglion cells during RP (see Fig 1A for location) (REF). However, recent evidence indicates that the retina is able to compensate functionally and structurally to this disease. For example, rod and cone bipolar cells have been shown to be able to form new contacts with their corresponding photoreceptor cells and functionally compensate for rod loss (REF). In terms of treatments, prevention of rod loss has been shown to maintain synaptic connections in photoreceptor cells (REF). These adaptations from RP and from treatment indicate that useful vision may return to normal if rods. It is likely that the time-dependent mechanisms following treatment and degeneration lead to retinal adaptations and also contribute to whether changes are deleterious or favorable for vision outcomes. Thus, evaluating treatment options will require measuring the adaptations across various stages of degeneration and various treatment time courses.   
+  
+  Overall, the mechanisms of adaptations in retina's bipolar cell synapses with cones during degeneration and after treatment are unknown. In this analysis, we sought to determine whether the retina compensates for the photoreceptor degeneration and contributes to useful vision. We utilized a mouse model for retinitis pigmentosa caused by a CNGB1 mutation in the rod photoreceptors. This model can simulate a treatment through a cre-lox recombination that prevents further degeneration progression. By conducting RNA-sequencing of bipolar cells in diseased, control, and treated mice during the progression of disease, we find _____ (description of results). These results provide confidence in therapies for maintaining cone vision and a mechanism for how gene therapies for retinitis pigmentosa may achieve greater efficacy.    
+
+# Data Collection
+
+We use the CNGB1 mouse (ages 30-210 days) to model RP. In these mice, a neoloxP cassette has been inserted into intron 19 of the Cngb1 gene (cyclic nucleotide gated channel, beta-1 subunit). This cassette prevents the expression Cngb1, a critical component of phototransduction whose dysfunction leads to rod death [@Biel2007;@Huttl2005]. Mutations in this gene cause RP in humans, giving us the ability to model a genuine cause of blindness [@Bareil2001]. 
+
+The CNGB1 genetically rescued mice undergoing RP. The neoloxP cassette that induces RP can be removed through cre-mediated recombination. To obtain temporal control of Cre-mediated rod rescue, we have crossed these mice with CAG-CreER mice. Offspring mice (henceforth, called Cngb1neo/neo), when fed tamoxifen, express Cre in rod photoreceptors, which removes the neoloxP cassette and induces normal Cngb1 expression. Thus, tamoxifen administration halts rod death in this disease, mimicking gene therapy. This system allows us to monitor changes in bipolar cell gene expression as a function of rod photoreceptor death and following a treatment that stops RP progression. A table of the samples in this study are listed below: 
+
+```{r}
+sample_counts <- read_csv("rp-samples.csv") %>%
+  select(1:4)
+
+
+```
+
+
+# Exploratory Data Analysis
+
+We find that there are differences between treatment, diseased, and control mice in an initial principle components analysis of this data. This dimensional reductionality allows assessment of the similarity and the dissimilarity between samples in these three groups. The first two principle components explain a majority of the variance across the gene expression samples. Control samples show high similarity with respect to the first principal components and a small within group variance. The treated samples ...  The diseased samples ...
+
+
+
+
+
+
+
+
