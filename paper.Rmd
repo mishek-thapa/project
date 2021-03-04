@@ -142,7 +142,7 @@ pca_fig <-  PCAplot()	+ theme_pubr() + labs(color = "Genotype") +
 pca_fig
 ```
 
-By running an unsupervised k-means clustering across all samples, gene clusters indicated that expression differences were involved in nervous system pathways. In this analysis, genes were ranked with greatest differences by their standard deviations and only the top 2000 genes were clustered. Clustered gene sets were then analyzed for which biological pathways they were concentrated in and most were found to be involved in nervous system development and processes. These results indicate that changes in bipolar cells from disease and treatment across sample groups are associated with nervous system development. 
+By running an unsupervised k-means clustering across all samples, gene clusters indicated that expression differences were involved in nervous system pathways. In this analysis, genes were ranked with greatest differences by their standard deviations and only the top 2000 genes were clustered. Clustered gene sets were then analyzed for which biological pathways they were concentrated in and most were found to be involved in nervous system development and processes (see Appendix for Full Information). This analysis indicates that changes in bipolar cells from disease and treatment across sample groups are associated with nervous system development. 
 
 ```{r, include=FALSE}
 ##########################
