@@ -1,13 +1,43 @@
-﻿Treatment,CNGB,Age,Quantity,,,,,,,,
-No Treatment,Control,30,3,,,,,,,,
-No Treatment,Diseased,30,4,,,,,,,,
-No Treatment,Control,90,3,,,,,,,,
-No Treatment,Diseased,90,4,,,,,,,,
-No Treatment,Control,210,3,,,,,,,,
-No Treatment,Diseased,210,4,,,,,,,,
-Treatment - 30 Days,Control,37,3,,,,,,,,
-Treatment - 30 Days,Diseased,37,4,,,,,,,,
-Treatment - 30 Days,Control,150,3,,,,,,,,
-Treatment - 30 Days,Diseased,150,4,,,,,,,,
-Treatment - 90 Days,Control,150,3,,,,,,,,
-Treatment - 90 Days,Diseased,150,4,,,,,,,,
+﻿Treatment,Treatment Date,CNGB,Age
+No Treatment,N/A,Control,30
+No Treatment,N/A,Control,90
+No Treatment,N/A,Control,210
+Treatment,30,Control,37
+Treatment,30,Control,150
+Treatment,90,Control,150
+No Treatment,N/A,Diseased,30
+No Treatment,N/A,Diseased,90
+No Treatment,N/A,Diseased,210
+Treatment,30,Diseased,37
+Treatment,30,Diseased,150
+Treatment,90,Diseased,150
+No Treatment,N/A,Control,30
+No Treatment,N/A,Control,90
+No Treatment,N/A,Control,210
+Treatment,30,Control,37
+Treatment,30,Control,150
+Treatment,90,Control,150
+No Treatment,N/A,Control,30
+No Treatment,N/A,Control,90
+No Treatment,N/A,Control,210
+Treatment,30,Control,37
+Treatment,30,Control,150
+Treatment,90,Control,150
+No Treatment,N/A,Diseased,30
+No Treatment,N/A,Diseased,90
+No Treatment,N/A,Diseased,210
+Treatment,30,Diseased,37
+Treatment,30,Diseased,150
+Treatment,90,Diseased,150
+No Treatment,N/A,Diseased,30
+No Treatment,N/A,Diseased,90
+No Treatment,N/A,Diseased,210
+Treatment,30,Diseased,37
+Treatment,30,Diseased,150
+Treatment,90,Diseased,150
+No Treatment,N/A,Diseased,30
+No Treatment,N/A,Diseased,90
+No Treatment,N/A,Diseased,210
+Treatment,30,Diseased,37
+Treatment,30,Diseased,150
+Treatment,90,Diseased,150
