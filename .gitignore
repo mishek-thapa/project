@@ -38,4 +38,5 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-*.db
+Mouse__mmusculus_gene_ensembl.db
+
