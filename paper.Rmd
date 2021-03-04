@@ -129,7 +129,8 @@ In an initial principle components analysis, we find that there are differences 
  
 
 library(ggpubr)
-pca_fig <-  PCAplot()	+ theme_pubr() + labs(color = "Genotype") + 
+pca_fig <-  PCAplot()	+ theme_pubr() + labs(color = "Genotype", 
+                                            title = "Groups well separated across PCA") + 
    scale_color_brewer(palette = "Dark2",
                       labels = c("CNG w/ 30 Day Treatment",
                                  "CNG",
@@ -138,11 +139,10 @@ pca_fig <-  PCAplot()	+ theme_pubr() + labs(color = "Genotype") +
  dev.off()
 ```
 
-```{r,fig.cap="Principal Components Analysis of P30 Treated, P210 Diseased, and P210 Control Animals", fig.width=4, fig.align="center"}
+```{r,fig.cap="Principal Components Analysis of P30 Treated, P210 Diseased, and P210 Control Animals", out.width = ".7\\textwidth", fig.align="center"}
 pca_fig
 ```
 
-By running an unsupervised k-means clustering across all samples, gene clusters indicated that expression differences were involved in nervous system pathways. In this analysis, genes were ranked with greatest differences by their standard deviations and only the top 2000 genes were clustered. Clustered gene sets were then analyzed for which biological pathways they were concentrated in and most were found to be involved in nervous system development and processes (see Appendix for Full Information). This analysis indicates that changes in bipolar cells from disease and treatment across sample groups are associated with nervous system development. 
 
 ```{r, include=FALSE}
 ##########################
@@ -172,6 +172,8 @@ kmeans <- image_read('heatmap.png')
   background_image(kmeans) + coord_fixed()
 ```
 
+
+By running an unsupervised k-means clustering across all samples, gene clusters indicated that expression differences were involved in nervous system pathways. In this analysis, genes were ranked with greatest differences by their standard deviations and only the top 2000 genes were clustered. Clustered gene sets were then analyzed for which biological pathways they were concentrated in and most were found to be involved in nervous system development and processes (see Appendix for Full Information). This analysis indicates that changes in bipolar cells from disease and treatment across sample groups are associated with nervous system development. 
 
 Given there are genetic differences observed in animals with RP and those that are treated, it would be useful to study exactly what genes become affected and how they contribute to the biological processes and mechanisms of blindness. From a preliminary analysis of these genes, it is likely these genes are involved in visual system. A more involved analysis involving the effect of treatment time and disease progression should better reveal the mechanisms of disease and treatment.      
 
