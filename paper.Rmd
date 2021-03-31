@@ -139,8 +139,9 @@ pca_fig <-  PCAplot()	+ theme_pubr() + labs(color = "Genotype",
  dev.off()
 ```
 
-```{r,fig.cap="Principal Components Analysis of P30 Treated, P210 Diseased, and P210 Control Animals", out.width = ".7\\textwidth", fig.align="center"}
-pca_fig
+```{r,fig.cap="Principal Components Analysis of P30 Treated, P210 Diseased, and P210 Control Animals", out.width = "70%", fig.align="center"}
+library(plotly)
+(pca_fig)
 ```
 
 
