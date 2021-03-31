@@ -1,0 +1,36 @@
+---
+title: "Methodology Section"
+bibliography: book.bib
+csl: american-statistical-association.csl
+output: pdf_document
+---
+
+\textbf{Genetic Two-Group Comparison}
+
+We used a negative binomial model to find genetic targets for treatment of RP. To do so, we analyze analyze gene expression changes between the diseased (Age of 30 Days) and treated groups (Treated 30/Aged to 37 Days). In doing so, we first normalized raw counts across samples by using the transcript per million or TPM method, which normalizes by gene length first and then by the sequencing depth (quantity of reads per sample). Next, we measured dispersion for each gene using maximum likelihood estimation. These gene-specific dispersion values were shrunk to the expected dispersion value using DESeq's empirical bayes method. We utilized DESEQ2 functions in R to fit this model to each gene (@deseq2):
+
+The model takes the form:
+\begin{equation}
+\begin{aligned}
+K_{ij}  &\sim NB(\mu_{ij}, \alpha_{i}) \\
+\mu_{ij} &= s_{j}q_{ij} \\
+log_2(q_{ij})  &= x_{j} \beta_i \\
+\end{aligned}
+\end{equation}
+ 
+where counts $K_{ij}$ for gene i, sample j are modeled using a negative binomial distribution with fitted mean $\mu_{ij}$ and a gene-specific dispersion parameter $\alpha_{i}$. The fitted mean is composed of a sample-specific size factor $s_{j}$ and a parameter $q_{ij}$ proportional to the expected true concentration of fragments for sample j. The coefficients $\beta_{i}$ give the log2 fold changes for gene i. We included a single parameter in the model, which explains whether an the gene comes from an animal that received treatment or not. 
+
+Differentially expressed genes were selected using a 1 percent false discovery rate threshold and those that had a log2fold change of 1. These stringent FDR is meant to limit the number of genes differentially expressed and only select for those with most significant changes. These genes were then loaded into iDEP for pathway and enrichment analysis to observe trends in the  nervous system. Genes for interpretation were filtered for those involved with the nervous system and those that had the greatest fold changes. We then checked to see if these genes were also differentially expressed with an empirical bayes modeling framework (@leng2013).
+
+\textbf{Genetic Time Course Analysis}
+
+We applied an empirical bayes mixture model to analyze bipolar cell transcriptomes of control and diseased retinas across time points. We used this analysis to identify whether or not the genes involved in treatment are changing during degeneration and/or develeopment. A potential concern was that an identified gene that we found to be associated with treatment may have resulted from differences in development. Because diseased and control retinas had ordered age groups (ages 30, 90, and 210), a time-course analysis was appropriate. This approach was not only able to model non-constant expression over time but also group them into expression paths (constantly up, down, sporadic, etc...). In addition to identifying differentially expressed genes, this method was also able to evaluate whether some genes expressed equivalent expression. This analysis was done using the EBSEQ-HMM package in R (@ebseq). 
+
+The model fomulation is as follows: 
+\begin{equation} 
+\begin{split}
+(X_{gt}|X_{g,t-1} = x_{g,t-1}, S_g^{\Delta t} = s, \Theta) \sim \mathrm{Beta-NB}(\mu_{gt} =  \frac{ r_{g, t-1} (\beta +  \xi_{g}^s, \bar{x}_{g,t-1} )}{\alpha -1} ) \\
+\end{split}
+\end{equation}
+where $X_{gt}$ represents the expression values for gene g at time t, $r_{g,t-1}$, $\beta +  \xi_{g}^s, \bar{x}_{g,t-1}$ represent contribution from the beta prior, $\Theta$ represents the parameters in the beta prior, and $S_g^{\Delta t}$ is the specified time point in the time course (see @ebseq for full derivation and code). The model parameters were fit using method of moments. We identified genes differentially expressed according to a 1 percent false discovery rate.         
+
