@@ -4,10 +4,14 @@ library(flextable)
 library(magick)
 library(ggpubr)
 
+
+# Code is organized by the section in which each figures and tables came from.
+# The code for the eda takes a long time to install and run. 
+
+
+###########
 # EDA Figures
-
-# Code is organized by the section in which each figures and tables came from. The code for the eda takes a long time to install and run. 
-
+###########
 
 #code from: https://stackoverflow.com/questions/57175351/flextable-autofit-in-a-rmarkdown-to-word-doc-causes-table-to-go-outside-page-mar
 
@@ -91,7 +95,9 @@ KmeansHeatmap()   #Heatmap for k-Means
 dev.off()
 
 
+###########
 # Results Figures
+###########
 
 library(EBSeqHMM)
 
