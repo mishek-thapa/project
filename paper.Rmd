@@ -48,7 +48,7 @@ knitr::knit_hooks$set(plot = function(x, options) {  # set new plot hook ...
  }
 
  #idep functions: http://bioinformatics.sdstate.edu/idep/
-  source('iDEP_core_functions.R') 
+source('iDEP_core_functions.R') 
 ```
 
 
@@ -176,7 +176,18 @@ kmeans <- image_read('heatmap.png')
 
 By running an unsupervised k-means clustering across the 9 samples, gene clusters indicated that expression differences were involved in nervous system pathways. Here, genes were ranked by those that had the largest standard deviations in gene expression and the top 2000 genes were selected for clustering. After clustering of the genes sets, we found most were involved in nervous system development and processes (see Appendix for Full Information). This analysis indicates that changes in bipolar cells in these 9 samples are associated with nervous system development. 
 
-Given there are genetic differences observed in animals with RP and those that are treated, it would be useful to study how they contribute to the biological processes and mechanisms of blindness. From a preliminary analysis of these genes, it is likely these genes are involved in visual processing. A more involved analysis involving the effect of treatment time and disease progression will better reveal the mechanisms of disease and treatment.      
+Given there are genetic differences observed in animals with RP and those that are treated, it would be useful to study how they contribute to the biological processes and mechanisms of blindness. From a preliminary analysis of these genes, it is likely these genes are involved in visual processing. A more involved analysis involving the effect of treatment time and disease progression will better reveal the mechanisms of disease and treatment.  
+
+
+
+
+
+
+
+
+
+
+
 
 # Appendix
 

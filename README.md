@@ -1,9 +1,12 @@
 
 # Notes 
 
-Installing all the code will take a long time. 
+Installing and running all the code will take a long time. 
 
 A database for the mouse genome is required for gene set analysis. This should be downloaded and transferred to the working directory. Here is a link to it:   https://drive.google.com/file/d/1H_2lWP4L3twXFyW76eudxTY8Qm_710Iv/view?usp=sharing
+
+
+Made figures in the make-figs.R file and compiled them in the report.Rmd document. 
 
 
 

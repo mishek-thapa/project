@@ -1,0 +1,137 @@
+---
+title: "\textit{GRIN2b} and \textit{RGS5} are associated with the Rescue of Bipolar Cell Contacts"
+header-includes: 
+   - \usepackage{booktabs}
+   - \usepackage{wrapfig}
+   - \usepackage{lipsum}
+output: pdf_document
+bibliography: book.bib
+---
+
+# Introduction
+
+A large effort in neuroscience is the assessment and treatment of degenerative diseases. The underlying question can be stated as follows: what are the structural and functional changes during degeneration and how can they be corrected? An example of a neurodegenerative disease is retinitis pigmentosa (RP), a form of incurable blindness that initially targets the rod photoreceptor cells. In this disease, loss of rods initiates alterations to the overall retinal circuitry [@Fariss2000; @Fei2002; @Strettoi2000]. One potential impact is cone-mediated vision, which is responsible for daylight vision and acuity. Another potential impact is the synaptic connections between cones and their downstream bipolar cells (see Figure 1 for diagram of retina layers). Understanding how retinitis pigmentosa alters the genetic profiles of bipolar cells may provide insights on the mechanisms in which vision is altered by RP and improve the efficacy of genetic treatments. 
+
+Though the retina's structure and function is stable after development, photoreceptor degeneration has been shown to remodel the retina and possibly deteriorate retinal function [@Lund1998; @Pu2006; @Puthussery2009; @Sauve2001]. In prior studies of the retina, the retina has been observed to have abnormal contacts with bipolar cells and disruptive spontaneous activity near the retinal ganglion cells during RP [@Pfeiffer2020; @Puthussery2009]. However, recent studies suggest that the retina is able to compensate functionally to this disease [@Care2020]. For example, bipolar cells have been shown to be able to form new contacts with different photoreceptor cells and functionally compensate for rod loss (Care et al., 2019; Johnson et al., 2017; Shen et al., 2020)). In terms of treatments, in a slow rod degeneration model, prevention of rod loss has been shown to maintain the synaptic connections of photoreceptor cells (Koch et al., 2012; Michalakis et al., 2014; and Petersen-Jones et al., 2018). These adaptations from RP and from treatment indicate that useful vision may return to normal if rod loss is halted. It is likely that the time-dependent mechanisms following treatment and degeneration lead to retinal adaptations and determine whether these changes are deleterious or favorable for vision outcomes. Thus, evaluating treatment options will require measuring the adaptations across multiple stages of degeneration and various treatment time courses.   
+
+Overall, the mechanisms of adaptations in retina's bipolar cell synapses with cones during degeneration and after treatment are unknown. In this analysis, we sought to determine whether the retina compensates for the photoreceptor degeneration and contributes to useful vision. We utilized a mouse model for retinitis pigmentosa caused by a CNGB1 mutation in the rod photoreceptors, a genuine cause of inherited blindness in humans. This model can also simulate a treatment through a cre-lox recombination that prevents further degeneration progression. By analyzing RNA-sequencing data from bipolar cells, we find that RGS5 and \textit{GRIN2b} are associated with treatment.  These results provide potential target genes in bipolar cells therapies for retinitis pigmentosa and photoreceptor degeneration diseases. 
+
+# Data and Exploratory Data Analysis
+
+We use the CNGB1-KO mouse (ages 30-210 days) to model RP. In these mice, a neoloxP cassette has been inserted into intron 19 of the Cngb1 gene (cyclic nucleotide gated channel, beta-1 subunit). This cassette prevents the expression Cngb1, a critical component of phototransduction whose dysfunction leads to rod death [@Biel2007;@Huttl2005]. Mutations in this gene delivers a slow progression of RP, giving us the ability to monitor bipolar cell gene expression as a function of rod photoreceptor death [@Bareil2001]. 
+
+The CNGB1 mice can be genetically rescued mice to halt RP. The model's neoloxP cassette that induces RP can be removed through cre-mediated recombination. To obtain temporal control of Cre-mediated rod rescue, we have crossed these mice with CAG-CreER mice. Offspring mice (henceforth, called Cngb1neo/neo), when fed tamoxifen, express Cre in rod photoreceptors, which removes the neoloxP cassette and induces normal Cngb1 expression. Thus, tamoxifen administration halts rod death in this disease, mimicking gene therapy. This system allows us to monitor changes in gene expression following a treatment that stops RP progression. Data was collected at the Field Lab at Duke Neurobiology from the courtesy of Miranda Scalabrino, PhD. A diagram of the samples collected are listed below: 
+
+By running an unsupervised k-means clustering across a subset of samples from, gene clusters indicated that expression differences were involved in nervous system pathways. Here, genes were ranked by those that had the largest standard deviations in gene expression and the top 2000 genes were selected for clustering. After clustering of the genes sets, we found a large subset of those genes were involved in nervous system development and processes (see Appendix for table of biological processes). This analysis indicates that changes in bipolar cells in these 9 samples are associated with nervous system development.			
+
+With a principal components analysis of gene expression levels, we find that there is variability between a subset of the treated, diseased, and control biological samples (Figure 3). The dimension reductionality in PCA provides a general assessment of the similarity between samples and across the three groups. The two principal components in Fig 3 explain a majority (53%) of the variance across its 9 samples. Control and treated samples have high similarity with respect to the first principal components and have small within group variances. The diseased group has one biological replicate that is dissimilar from the 3 other samples in its group. Overall, this observation motivated us to uncover the exact changes in expression in treated and diseased mice. A subset of those genes may lead to knowledge about the mechanisms of how this disease progresses during treatment. 		
+
+Given there are genetic differences observed in animals with RP and those that are treated, it would be useful to study how they contribute to the biological processes and mechanisms of blindness. From a preliminary analysis of these genes, it is possible these genes are responsible for disease and treatment. However, a more involved analysis including statistical modeling may better reveal the mechanisms of disease and treatment.
+
+# Methodology
+
+
+
+## Genetic Two-Group Comparison
+
+We used a negative binomial model to find genetic targets for treatment of RP. To do so, we analyze gene expression changes between the diseased (Age of 30 Days) and treated groups (Treated 30/Aged to 37 Days). In doing so, we first normalized raw counts across samples by using the transcript per million or TPM method, which normalizes by gene length first and then by the sequencing depth (quantity of reads per sample). Next, we measured dispersion for each gene using maximum likelihood estimation. These gene-specific dispersion values were shrunk to the expected dispersion value using DESeq's empirical bayes method. We utilized DESEQ2 functions in R to fit this model to each gene (@deseq2):
+
+\begin{equation}
+\begin{aligned}
+K_{ij}  &\sim NB(\mu_{ij}, \alpha_{i}) \\
+\mu_{ij} &= s_{j}q_{ij} \\
+log_2(q_{ij})  &= x_{j} \beta_i \\
+\end{aligned}
+\end{equation}
+
+
+where counts $K_{ij}$ for gene i, sample j are modeled using a negative binomial distribution with fitted mean $\mu_{ij}$ and a gene-specific dispersion parameter $\alpha_{i}$. The fitted mean is composed of a sample-specific size factor $s_{j}$ and a parameter $q_{ij}$ proportional to the expected true concentration of fragments for sample j. The coefficients $\beta_{i}$ give the log2 fold changes for gene i. This modeling framework allows for assessing what genes are expressed significantly differently in a retina that received treatment. 
+
+Differentially expressed genes were selected using a 1 percent false discovery rate threshold and those that had a log2fold change of 1. This stringent FDR is meant to limit the number of genes differentially expressed and only select for those with most significant changes. These genes were then loaded into iDEP for pathway and enrichment analysis to observe trends in the  nervous system. Genes for interpretation were filtered for those involved with the nervous system and those that had the greatest fold changes.
+
+\textbf{Sensitivity Analysis}
+
+We then checked to see if these genes were also differentially expressed with an empirical bayes modeling framework (@leng2013) instead of the above frequentist model.
+
+The prior specification for the bayes model is as follows:
+
+$$
+q \vert \alpha, \beta \sim Beta (\alpha, \beta)
+$$
+
+
+Here, the latent level of expression is assummeed to follow the beta distribution. The prior parameters were fit using method of moments. Diagnostics for this prior specification evaluate how well this prior fit according to QQ plots and distribution comparison. 
+
+Conditional on counts having a given mean, we assume counts arise from a negative binomial distribution. The posterior is thus:  
+
+\begin{equation} 
+\begin{split}
+(X_{g}| \Theta) \sim \mathrm{Beta-NB}(\mu_{g} =  \frac{ r_{g} \beta}{\alpha -1} ) \\
+\end{split}
+\end{equation} 
+
+In addition, we applied this model using the uninformative prior:
+
+
+$$
+X_{g} \sim \mathrm{Unif}(0,1)) \\
+$$
+
+
+
+\textbf{Genetic Time Course Analysis}
+
+We applied an empirical bayes mixture model to analyze bipolar cell transcriptomes of control and diseased retinas across time points. We used this analysis to identify whether or not the genes involved in treatment are changing during degeneration and/or development. A potential concern was that an identified gene that we found to be associated with treatment may have resulted from differences in development. Because diseased and control retinas had ordered age groups (ages 30, 90, and 210), a time-course analysis was appropriate. This approach was not only able to model non-constant expressions over time but also group them into expression paths (constantly up, down, sporadic, etc...). In addition to identifying differentially expressed genes, this method was also able to evaluate whether some genes expressed equivalent expression. This analysis was done using the EBSEQ-HMM package in R (@ebseq). 
+
+This model has the same prior as the earlier bayesian model. The emission distribution is as follows: 
+\begin{equation} 
+\begin{split}
+(X_{gt}|X_{g,t-1} = x_{g,t-1}, S_g^{\Delta t} = s, \Theta) \sim \mathrm{Beta-NB}(\mu_{gt} =  \frac{ r_{g, t-1} (\beta +  \xi_{g}^s, \bar{x}_{g,t-1} )}{\alpha -1} ) \\
+\end{split}
+\end{equation}
+where $X_{gt}$ represents the expression values for gene g at time t, $r_{g,t-1}$, $\beta +  \xi_{g}^s, \bar{x}_{g,t-1}$ represent contribution from the beta prior, $\Theta$ represents the parameters in the beta prior, and $S_g^{\Delta t}$ is the specified time point in the time course. The model parameters were fit using method of moments. We identified genes differentially expressed according to genes that had a posterior probability that had a probability that was greater than 0.5 (see @ebseq for full derivation, code, and further specifications on methodology). 
+
+# Results
+
+Using the negative binomial model, we identified 440 genes that were differentially expressed in diseased and treated mice and were also involved in visual system pathways. We investigated genes differentially expressed between the diseased retinas collected at 30 days and retinas genetically rescued for rod death at the same age (but collected at 37 days). This age is again important in recovering bipolar cell rewiring because early genetic rescue recovered the synaptic connections in this animal model (Wang et.al., 2019). After isolating the two most differentially expressed genes involved in the nervous system, \textit{GRIN2B} and \textit{RGS5} were two protein coding genes identified (Steltzer et.al., 2016). \textit{RGS5} (regulators of G protein signaling 5) is a gene that inhibits signal transduction and was found to be up-regulated in treatment groups. \textit{GRIN2B} (Glutamate receptor subunit epsilon-2) is another signal transduction gene and was also up-regulated in treatment groups. Dysfunction in \textit{GRIN2B} has been associated with other nervous system diseases such as epilepsy and autism (Davis et.al., 2017). This gene encodes part of a cell receptor and is identified as important in synaptic plasticity. These two genes are thus potential targets for correcting bipolar cell mis-wiring during the progression of RP.
+
+\textit{GRIN2B} and \textit{RGS5} were found to be regulated across time points in the degeneration time course but not in that of the aging time course. In Fig 2, more genes were observed to be differentially expressed across degeneration groups than in normal aging groups (FDR < 0.10). Of those genes, \textit{GRIN2B} and \textit{RGS5} were differentially regulated across the progression of RP. In the ordered control groups, these \textit{GRIN2B} and \textit{RGS5} were found to be equivalently expressed   \textit{RGS5} is observed to decline in expression with greater degeneration, while \textit{GRIN2B} declines in expression at 90 days of age then increases in expression at 210 days of age. These two genes were not differentially expressed in control animals, thereby indicating that these genes are specifically regulated during degeneration.
+
+
+# Discussion 
+
+This study demonstrates how we found two genes -- GRIN2B AND RGS5 -- expressed in bipolar cells which may be targeted in gene therapy for RP. These genes were also found to be differentially expressed in mice with disease progression across three time points. In a frequentist model, we found that this observation  We emphasize below that this conclusion leads to more optimism about vision restoration for RP patients and a better understanding of the functional effects of this disease.
+
+This study also identified potential genes involved in the degeneration time course of RP that may be effective targets for gene therapy in bipolar cells to slow or reverse vision loss. Based on the differences in expression in the degeneration time-course, up-regulation of \textit{RGS5} and up-regulation of \textit{GRIN2B} at late stages of degeneration may recover bipolar cell contacts with photoreceptors. Since these genes were equivalently expressed during degeneration, this study suggests those gene expression levels should be maintained to a constant level. The current gene therapies for RP primarily focus on the recovery of the rods, but do not try to recover the synaptic connections of rods and cones with bipolar cells. Therefore, this novel approach has the potential to reverse observed miswiring and contribute to better vision outcomes in RP patients. The genes identified in this study exist in the human genome and hold a similar function, so this proposed addition to RP gene therapies has potential to translate to the clinic \cite{stelzer2016}. 
+
+## Sensitivity Analyses 
+
+By changing the prior to an uninformative uniform distribution, this gene list changed slightly but Grin2b and RGS5 were still found to be associated with rescue. By applying a frequentist model instead, the 50 genes here did not change. This result provides confidence that this result is robust to methods.   A more comprehensive literature review on this gene list should clarify which additional genes may serve as good targets for therapy.  
+
+## Strengths and Limitations
+
+Another limitation in this study is the method of gene selection and complexity of genetic pathways. We selected two genes that exhibited the largest observed change in mean expression level. However, there is potential that other genes are involved in the recovery of bipolar cell connections. There were a total of 440 genes that were differentially expressed in rescued bipolar cells, which leaves potential for many genes to be involved in the rescue. In addition, some genes have meta-functions in which they do not directly encode changes to the neuron, but instead control expression levels of other genes. Thus, there are potentially many genes indirectly associated with treatment that are not able to perform the rescue. As a result, we have listed the 50 genes with the largest changes that were identified to be associated with treatment (see Appendix). Still, these results were also found 
+The limitations in the second analysis is the lack of sufficient amounts of ordered conditions. In the characterization of the genes associated with treatment, there were only three time points of data collection. As a result, intermediate time points in between those time points may exhibit expression levels that put those genes in a different category. In particular, there is a large gap in data collection between day 90 and day 210 in which gene expression levels may not have followed the observed trajectory. That information would better clarify these results and provide more confidence about these results. Still, given this data that we have, we were able to characterize the genes involved in treatment to an extent. 
+
+## Future Directions 
+Future steps consist of improvements to data collection and analysis. In particular, an analysis that implements a frequentist model for the time course of gene expression levels across degeneration would be useful. This model would be able to further confirm the robustness of the results from this study. In addition, data collection methods that address the current limitations with the dataset would be useful. In particular, it would be useful to see whether these gene expression levels stay consistent in between the current time points. Lastly, the results would be interesting to test on additional animals models and different variants of RP. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
