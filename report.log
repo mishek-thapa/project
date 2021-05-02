@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.31)  1 MAY 2021 21:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.31)  2 MAY 2021 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,35 +409,145 @@ se-generic.tex)))
 Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
-)) (./report.aux)
+)) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.s
+ty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count286
+\multirow@dima=\skip55
+\bigstrutjot=\dimen178
+) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count287
+\mult@box=\box51
+\multicol@leftmargin=\dimen179
+\c@unbalance=\count288
+\c@collectmore=\count289
+\doublecol@number=\count290
+\multicoltolerance=\count291
+\multicolpretolerance=\count292
+\full@width=\dimen180
+\page@free=\dimen181
+\premulticols=\dimen182
+\postmulticols=\dimen183
+\multicolsep=\skip56
+\multicolbaselineskip=\skip57
+\partial@page=\box52
+\last@line=\box53
+\maxbalancingoverflow=\dimen184
+\mult@rightbox=\box54
+\mult@grightbox=\box55
+\mult@gfirstbox=\box56
+\mult@firstbox=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\c@minrows=\count293
+\c@columnbadness=\count294
+\c@finalcolumnbadness=\count295
+\last@try=\dimen185
+\multicolovershoot=\dimen186
+\multicolundershoot=\dimen187
+\mult@nat@firstbox=\box95
+\colbreak@box=\box96
+\mc@col@check@num=\count296
+) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.st
+y
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+(/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen188
+\ar@mcellbox=\box97
+\extrarowheight=\dimen189
+\NC@list=\toks27
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box98
+)
+\everycr=\toks28
+\minrowclearance=\skip60
+) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
+\LTchunksize=\count297
+\LTcapwidth=\dimen190
+\LT@head=\box99
+\LT@firsthead=\box100
+\LT@foot=\box101
+\LT@lastfoot=\box102
+\LT@cols=\count298
+\LT@rows=\count299
+\c@LT@tables=\count300
+\c@LT@chunks=\count301
+\LT@p@ftn=\toks29
+) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Info: Redefining \microtypecontext on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Info: Redefining \microtypecontext on input line 76.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 70.
+LaTeX Info: Redefining \showhyphens on input line 76.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -456,7 +566,7 @@ ys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 70.
+Package hyperref Info: Link coloring OFF on input line 76.
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -466,11 +576,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count286
+\c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 70.
-LaTeX Info: Redefining \pageref on input line 70.
-LaTeX Info: Redefining \nameref on input line 70.
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
 (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -510,75 +620,316 @@ LaTeX Info: Redefining \nameref on input line 70.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-2.
+8.
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-2.
+8.
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-72.
+78.
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-72.
+78.
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 72.
+(Font)              <12> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 72.
+(Font)              <8> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 72.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
+(Font)              <6> on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
 
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
 
 (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/mishekthapa/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+<intro-fig.png, id=56, 543.02875pt x 441.65pt>
+File: intro-fig.png Graphic file (type png)
+<use intro-fig.png>
+Package pdftex.def Info: intro-fig.png  used on input line 94.
+(pdftex.def)             Requested size: 281.86284pt x 229.24149pt.
+[1
 
 {/Users/mishekthapa/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
-p}]
+p} <./intro-fig.png>]
+<tree.png, id=71, 923.45pt x 363.3575pt>
+File: tree.png Graphic file (type png)
+<use tree.png>
+Package pdftex.def Info: tree.png  used on input line 154.
+(pdftex.def)             Requested size: 469.75555pt x 184.8386pt.
+<gene-eda.png, id=72, 779.91376pt x 354.32375pt>
+File: gene-eda.png Graphic file (type png)
+<use gene-eda.png>
+Package pdftex.def Info: gene-eda.png  used on input line 171.
+(pdftex.def)             Requested size: 469.74886pt x 213.41226pt.
+[2 <./tree.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 205.
+(Font)              <10> on input line 219.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 205.
+(Font)              <7> on input line 219.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 205.
-[2] [3]
+(Font)              <5> on input line 219.
+[3 <./gene-eda.png>]
+<volcano.png, id=93, 1003.75pt x 903.375pt>
+File: volcano.png Graphic file (type png)
+<use volcano.png>
+Package pdftex.def Info: volcano.png  used on input line 319.
+(pdftex.def)             Requested size: 234.87042pt x 211.38338pt.
+[4]
+<timecourses.png, id=103, 1559.8275pt x 836.12375pt>
+File: timecourses.png Graphic file (type png)
+<use timecourses.png>
+Package pdftex.def Info: timecourses.png  used on input line 347.
+(pdftex.def)             Requested size: 469.73694pt x 251.79591pt.
+[5 <./volcano.png>]
 
-LaTeX Warning: Citation `stelzer2016' on page 4 undefined on input line 359.
+LaTeX Warning: Citation `stelzer2016' on page 6 undefined on input line 399.
 
-[4] [5] [6] (./report.aux)
+[6 <./timecourses.png>]
+<tablefunc1.png, id=119, 387.4475pt x 355.3275pt>
+File: tablefunc1.png Graphic file (type png)
+<use tablefunc1.png>
+Package pdftex.def Info: tablefunc1.png  used on input line 494.
+(pdftex.def)             Requested size: 387.45245pt x 355.33203pt.
+[7] [8 <./tablefunc1.png>]
+<diagnostics.png, id=135, 768.8725pt x 202.7575pt>
+File: diagnostics.png Graphic file (type png)
+<use diagnostics.png>
+Package pdftex.def Info: diagnostics.png  used on input line 511.
+(pdftex.def)             Requested size: 469.76239pt x 123.8799pt.
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 555--555
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000021280[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 561--561
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000102517[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 567--567
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000105720[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 573--573
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000109162[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 579--579
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000105485[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 585--585
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000103225[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 591--591
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000107109[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 597--597
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000097081[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 603--603
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000002100[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 609--609
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000109282[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 615--615
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000024114[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 621--621
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000036198[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 627--627
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000073164[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 633--633
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000099876[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 639--639
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000117786[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 645--645
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000069049[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 651--651
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000069045[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 657--657
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000068457[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 663--663
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000056673[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 669--669
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000059751[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 675--675
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000109387[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 681--681
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000104027[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 687--687
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000020651[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 693--693
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000106443[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 699--699
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000084391[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 705--705
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000102659[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 711--711
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000104753[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 717--717
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000108269[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 723--723
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000104696[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 729--729
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000030862[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 735--735
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000036198[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 741--741
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000113439[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 747--747
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000113332[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 753--753
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000064080[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 759--759
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000105703[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 765--765
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000117328[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 771--771
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000038064[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 777--777
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000038600[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 783--783
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000113411[]|  
+ []
+
+
+Overfull \hbox (56.54161pt too wide) in paragraph at lines 789--789
+[]|[]\T1/lmr/m/n/11 (-20) ENSMUSG00000113199[]|  
+ []
+
+[9 <./diagnostics.png>] [10] [11] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 35461E1D6758E113482E740317348D03;1286.
+(rerunfilecheck)             Checksum: 3A81578B11B8F903A08BF41FFC9EA299;1848.
  ) 
 Here is how much of TeX's memory you used:
- 11983 strings out of 481008
- 183447 string characters out of 5908111
- 688005 words of memory out of 5000000
- 28762 multiletter control sequences out of 15000+600000
- 459514 words of font info for 138 fonts, out of 8000000 for 9000
+ 12441 strings out of 481008
+ 190150 string characters out of 5908111
+ 686909 words of memory out of 5000000
+ 29173 multiletter control sequences out of 15000+600000
+ 462731 words of font info for 142 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,17n,75p,268b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.e
-nc}{/Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}
+ 71i,17n,75p,573b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
+/Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}
 {/Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/U
 sers/mishekthapa/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</
 Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><
@@ -586,16 +937,17 @@ Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><
 </Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 ></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 ></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb
+></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 ></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 ></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb>
 </Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 ></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pf
 b></Users/mishekthapa/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pf
 b>
-Output written on report.pdf (6 pages, 196833 bytes).
+Output written on report.pdf (11 pages, 1195264 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 28745 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 30860 words of extra memory for PDF output out of 35830 (max. 10000000)
 
